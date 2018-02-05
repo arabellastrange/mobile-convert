@@ -20,6 +20,7 @@ function model() {
                     hash[list[i].getAttribute('currency')] = list[i].getAttribute('rate');
                     //console.log(list[i]);
                 }
+                hash['EUR'] = 1; // euro not included in live data so add manually
 
             } else {
                 alert('There was a problem with the request.');
@@ -28,8 +29,6 @@ function model() {
     }
 
     this.getRate = function (curr) {
-       // console.log(curr);
-      //  console.log(hash[curr]);
         return hash[curr];
     }
 }

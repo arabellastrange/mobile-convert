@@ -66,6 +66,10 @@ function view() {
         });
     };
 
+    this.setCurrency = function (curr) {
+        currency.innerText = curr;
+    }
+
     this.setToCurrencyListener = function () {
         tCurrencySelector.addEventListener("change", function () {
             selectedTo = tCurrencySelector.options[tCurrencySelector.selectedIndex].value;

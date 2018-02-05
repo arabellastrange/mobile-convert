@@ -27,36 +27,23 @@ function controller() {
             var newAmount;
 
             if(!(amount === "")){
-                if(!(from === "EUR")){
-                    console.log("not converting from euro boo")
-                    newAmount = convert(fromRate, amount);
-                    console.log("intermediate amount: " + newAmount)
-                    cview.setResult(convert(toRate, newAmount));
-                }
-                else {
-                    console.log("converting from euro yay")
-                    cview.setResult(convert(toRate, amount));
-                }
+                cview.setResult(convert(fromRate, toRate, amount));
+                cview.setCurrency(to);
             }
         });
     };
 
-    function convert(t, a) {
-        //assumes you are always converting from Euro to another currency
-        //if(t < 1){
-            console.log("converting to a smaller currency to multiply");
-            console.log("i think im converting to " + to + " at " + t);
-            console.log("i think im converting " + a + " money");
-            return a*t;
-       // };
-
-        /*else if(t >= 1){
-            console.log("converting to larger so devide");
-            console.log("i think im converting to " + t);
-            console.log("i think im converting " + a + " money");
-            return a/t;
-        };*/
+    function convert(f, t, a) {
+        console.log("i think im converting from " + f);
+        console.log("i think im converting to "  + t);
+        console.log("i think im converting " + a + " money");
+        return round(((a*t)/f), 2);
     };
+
+    function round(number, precision) {
+        var factor = Math.pow(10, precision);
+        return Math.round(number * factor) / factor;
+    }
 
     this.initial = function () {
         ccontroller.updateDisplay();
