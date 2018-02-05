@@ -43,17 +43,19 @@ function controller() {
 
     function convert(t, a) {
         //assumes you are always converting from Euro to another currency
-        if(t < 1){
+        //if(t < 1){
             console.log("converting to a smaller currency to multiply");
-            console.log("i think im converting to " + t);
+            console.log("i think im converting to " + to + " at " + t);
             console.log("i think im converting " + a + " money");
             return a*t;
-        }else if(t >= 1){
+       // };
+
+        /*else if(t >= 1){
             console.log("converting to larger so devide");
             console.log("i think im converting to " + t);
             console.log("i think im converting " + a + " money");
             return a/t;
-        };
+        };*/
     };
 
     this.initial = function () {
