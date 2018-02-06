@@ -6,9 +6,15 @@ function model() {
     hash = new Object();
 
     this.init = function () {
-        httpRequest.onreadystatechange = this.parse;
-        httpRequest.open('GET', 'https://devweb2017.cis.strath.ac.uk/~aes02112/ecbxml.php', true);
-        httpRequest.send();
+        window.addEventListener('online', function () {
+            httpRequest.onreadystatechange = this.parse;
+            httpRequest.open('GET', 'https://devweb2017.cis.strath.ac.uk/~aes02112/ecbxml.php', true);
+            httpRequest.send();
+        });
+        window.addEventListener('offline', function () {
+            hash  = localStorage.getItem('data');
+        })
+
     }
 
     this.parse = function () {
@@ -18,9 +24,9 @@ function model() {
                 var list =  response.getElementsByTagName("Cube");
                 for(var i = 2; i < list.length; i++){
                     hash[list[i].getAttribute('currency')] = list[i].getAttribute('rate');
-                    //console.log(list[i]);
                 }
                 hash['EUR'] = 1; // euro not included in live data so add manually
+                localStorage.setItem('data', hash.toString());
 
             } else {
                 alert('There was a problem with the request.');
