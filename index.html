@@ -12,175 +12,175 @@
     <link rel = "apple-touch-icon" href="img/currency1.png">
     <link rel="shourtcut icon" href="img/currency1.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="convert.css">
 
     <title>Currency Converter</title>
 </head>
 <body>
-    <div id="mainBody">
-        <div id="navigation" class="overlay">
-            <a href="javascript:void(0)" id="closeIcon">&times;</a>
+<div id="mainBody">
+    <div id="navigation" class="overlay">
+        <a href="javascript:void(0)" id="closeIcon">&times;</a>
 
-            <div class = "overlayContent">
-                <p>From:</p>
-                <select id = "fcurrency" class="selectCurr">
-                    <option selected value="EUR" class="foption">European Euro (EUR)</option>
-                    <option value="USD" class = "foption">US Dollar (USD)</option>
-                    <option value="JPY" class = "foption">Japanese Yen (JPY)</option>
-                    <option value="BGN" class = "foption">Bulgarian Lev (BGN)</option>
-                    <option value="CZK" class = "foption">Czech Koruna (CZK)</option>
-                    <option value="DKK" class = "foption">Danish Krone (DZK)</option>
-                    <option value="GBP" class = "foption">UK Pound Sterling (GBP)</option>
-                    <option value="HUF" class = "foption">Hungarian Forint (HUF)</option>
-                    <option value="PLN" class = "foption">Polish Zloty (PLN)</option>
-                    <option value="RON" class = "foption">Romanian Leu (RON)</option>
-                    <option value="SEK" class = "foption">Swedish Krona (SEK)</option>
-                    <option value="CHF" class = "foption">Swiss Franc (CHF)</option>
-                    <option value="ISK" class = "foption">Icelandic Krona (ISK)</option>
-                    <option value="NOK" class = "foption">Norwegian Krone (NOK)</option>
-                    <option value="HRK" class = "foption">Croatian Kuna (HRK)</option>
-                    <option value="RUB" class = "foption">Russian Rouble (RUB)</option>
-                    <option value="TRY" class = "foption">Turkish Lira (TRY)</option>
-                    <option value="AUD" class = "foption">Australian Dollar (AUD)</option>
-                    <option value="BRL" class = "foption">Brazilian Real (BRL)</option>
-                    <option value="CAD" class = "foption">Canadian Dollar (CAD)</option>
-                    <option value="CNY" class = "foption">Chinese Yuan Renminbi (CNY)</option>
-                    <option value="HKD" class = "foption">Hong Kong Dollar (HKD)</option>
-                    <option value="IDR" class = "foption">Indonesian Rupiah (IDR)</option>
-                    <option value="ILS" class = "foption">Shekel (ILS)</option>
-                    <option value="INR" class = "foption">Indian Rupee (INR)</option>
-                    <option value="KRW" class = "foption">South Korean Won (KRW)</option>
-                    <option value="MXN" class = "foption">Mexican Peso (MXN)</option>
-                    <option value="MYR" class = "foption">Malaysian Ringgit (MYR)</option>
-                    <option value="NZD" class = "foption">New Zealand Dollar (NZD)</option>
-                    <option value="PHP" class = "foption">Philippine Piso (PHP)</option>
-                    <option value="SGD" class = "foption">Singapore Dollar (SGD)</option>
-                    <option value="THB" class = "foption">Thai Baht (THB)</option>
-                    <option value="ZAR" class = "foption">South African Rand (ZAR)</option>
-                </select>
+        <div class = "overlayContent">
+            <p>From:</p>
+            <select id = "fcurrency" class="selectCurr">
+                <option selected value="EUR" class="foption">European Euro (EUR)</option>
+                <option value="USD" class = "foption">US Dollar (USD)</option>
+                <option value="JPY" class = "foption">Japanese Yen (JPY)</option>
+                <option value="BGN" class = "foption">Bulgarian Lev (BGN)</option>
+                <option value="CZK" class = "foption">Czech Koruna (CZK)</option>
+                <option value="DKK" class = "foption">Danish Krone (DZK)</option>
+                <option value="GBP" class = "foption">UK Pound Sterling (GBP)</option>
+                <option value="HUF" class = "foption">Hungarian Forint (HUF)</option>
+                <option value="PLN" class = "foption">Polish Zloty (PLN)</option>
+                <option value="RON" class = "foption">Romanian Leu (RON)</option>
+                <option value="SEK" class = "foption">Swedish Krona (SEK)</option>
+                <option value="CHF" class = "foption">Swiss Franc (CHF)</option>
+                <option value="ISK" class = "foption">Icelandic Krona (ISK)</option>
+                <option value="NOK" class = "foption">Norwegian Krone (NOK)</option>
+                <option value="HRK" class = "foption">Croatian Kuna (HRK)</option>
+                <option value="RUB" class = "foption">Russian Rouble (RUB)</option>
+                <option value="TRY" class = "foption">Turkish Lira (TRY)</option>
+                <option value="AUD" class = "foption">Australian Dollar (AUD)</option>
+                <option value="BRL" class = "foption">Brazilian Real (BRL)</option>
+                <option value="CAD" class = "foption">Canadian Dollar (CAD)</option>
+                <option value="CNY" class = "foption">Chinese Yuan Renminbi (CNY)</option>
+                <option value="HKD" class = "foption">Hong Kong Dollar (HKD)</option>
+                <option value="IDR" class = "foption">Indonesian Rupiah (IDR)</option>
+                <option value="ILS" class = "foption">Shekel (ILS)</option>
+                <option value="INR" class = "foption">Indian Rupee (INR)</option>
+                <option value="KRW" class = "foption">South Korean Won (KRW)</option>
+                <option value="MXN" class = "foption">Mexican Peso (MXN)</option>
+                <option value="MYR" class = "foption">Malaysian Ringgit (MYR)</option>
+                <option value="NZD" class = "foption">New Zealand Dollar (NZD)</option>
+                <option value="PHP" class = "foption">Philippine Piso (PHP)</option>
+                <option value="SGD" class = "foption">Singapore Dollar (SGD)</option>
+                <option value="THB" class = "foption">Thai Baht (THB)</option>
+                <option value="ZAR" class = "foption">South African Rand (ZAR)</option>
+            </select>
 
-                <p>To: </p>
-                <select id ="tcurrency" class="selectCurr">
-                    <option value="EUR" class="toption">European Euro (EUR)</option>
-                    <option value="USD" class = "toption">US Dollar (USD)</option>
-                    <option value="JPY" class = "toption">Japanese Yen (JPY)</option>
-                    <option value="BGN" class = "toption">Bulgarian Lev (BGN)</option>
-                    <option value="CZK" class = "toption">Czech Koruna (CZK)</option>
-                    <option value="DKK" class = "toption">Danish Krone (DZK)</option>
-                    <option selected value="GBP" class = "toption">UK Pound Sterling (GBP)</option>
-                    <option value="HUF" class = "toption">Hungarian Forint (HUF)</option>
-                    <option value="PLN" class = "toption">Polish Zloty (PLN)</option>
-                    <option value="RON" class = "toption">Romanian Leu (RON)</option>
-                    <option value="SEK" class = "toption">Swedish Krona (SEK)</option>
-                    <option value="CHF" class = "toption">Swiss Franc (CHF)</option>
-                    <option value="ISK" class = "toption">Icelandic Krona (ISK)</option>
-                    <option value="NOK" class = "toption">Norwegian Krone (NOK)</option>
-                    <option value="HRK" class = "toption">Croatian Kuna (HRK)</option>
-                    <option value="RUB" class = "toption">Russian Rouble (RUB)</option>
-                    <option value="TRY" class = "toption">Turkish Lira (TRY)</option>
-                    <option value="AUD" class = "toption">Australian Dollar (AUD)</option>
-                    <option value="BRL" class = "toption">Brazilian Real (BRL)</option>
-                    <option value="CAD" class = "toption">Canadian Dollar (CAD)</option>
-                    <option value="CNY" class = "toption">Chinese Yuan Renminbi (CNY)</option>
-                    <option value="HKD" class = "toption">Hong Kong Dollar (HKD)</option>
-                    <option value="IDR" class = "toption">Indonesian Rupiah (IDR)</option>
-                    <option value="ILS" class = "toption">Shekel (ILS)</option>
-                    <option value="INR" class = "toption">Indian Rupee (INR)</option>
-                    <option value="KRW" class = "toption">South Korean Won (KRW)</option>
-                    <option value="MXN" class = "toption">Mexican Peso (MXN)</option>
-                    <option value="MYR" class = "toption">Malaysian Ringgit (MYR)</option>
-                    <option value="NZD" class = "toption">New Zealand Dollar (NZD)</option>
-                    <option value="PHP" class = "toption">Philippine Piso (PHP)</option>
-                    <option value="SGD" class = "toption">Singapore Dollar (SGD)</option>
-                    <option value="THB" class = "toption">Thai Baht (THB)</option>
-                    <option value="ZAR" class = "toption">South African Rand (ZAR)</option>
-                </select>
-                <p>Rate: </p>
-                <select id="rate" class="rateSelect">
-                    <option selected value = "0">0%</option>
-                    <option value = "2">2%</option>
-                    <option value = "4">4%</option>
-                    <option value = "6">6%</option>
-                </select>
-            </div>
+            <p>To: </p>
+            <select id ="tcurrency" class="selectCurr">
+                <option value="EUR" class="toption">European Euro (EUR)</option>
+                <option value="USD" class = "toption">US Dollar (USD)</option>
+                <option value="JPY" class = "toption">Japanese Yen (JPY)</option>
+                <option value="BGN" class = "toption">Bulgarian Lev (BGN)</option>
+                <option value="CZK" class = "toption">Czech Koruna (CZK)</option>
+                <option value="DKK" class = "toption">Danish Krone (DZK)</option>
+                <option selected value="GBP" class = "toption">UK Pound Sterling (GBP)</option>
+                <option value="HUF" class = "toption">Hungarian Forint (HUF)</option>
+                <option value="PLN" class = "toption">Polish Zloty (PLN)</option>
+                <option value="RON" class = "toption">Romanian Leu (RON)</option>
+                <option value="SEK" class = "toption">Swedish Krona (SEK)</option>
+                <option value="CHF" class = "toption">Swiss Franc (CHF)</option>
+                <option value="ISK" class = "toption">Icelandic Krona (ISK)</option>
+                <option value="NOK" class = "toption">Norwegian Krone (NOK)</option>
+                <option value="HRK" class = "toption">Croatian Kuna (HRK)</option>
+                <option value="RUB" class = "toption">Russian Rouble (RUB)</option>
+                <option value="TRY" class = "toption">Turkish Lira (TRY)</option>
+                <option value="AUD" class = "toption">Australian Dollar (AUD)</option>
+                <option value="BRL" class = "toption">Brazilian Real (BRL)</option>
+                <option value="CAD" class = "toption">Canadian Dollar (CAD)</option>
+                <option value="CNY" class = "toption">Chinese Yuan Renminbi (CNY)</option>
+                <option value="HKD" class = "toption">Hong Kong Dollar (HKD)</option>
+                <option value="IDR" class = "toption">Indonesian Rupiah (IDR)</option>
+                <option value="ILS" class = "toption">Shekel (ILS)</option>
+                <option value="INR" class = "toption">Indian Rupee (INR)</option>
+                <option value="KRW" class = "toption">South Korean Won (KRW)</option>
+                <option value="MXN" class = "toption">Mexican Peso (MXN)</option>
+                <option value="MYR" class = "toption">Malaysian Ringgit (MYR)</option>
+                <option value="NZD" class = "toption">New Zealand Dollar (NZD)</option>
+                <option value="PHP" class = "toption">Philippine Piso (PHP)</option>
+                <option value="SGD" class = "toption">Singapore Dollar (SGD)</option>
+                <option value="THB" class = "toption">Thai Baht (THB)</option>
+                <option value="ZAR" class = "toption">South African Rand (ZAR)</option>
+            </select>
+            <p>Rate: </p>
+            <select id="rate" class="rateSelect">
+                <option selected value = "0">0%</option>
+                <option value = "2">2%</option>
+                <option value = "4">4%</option>
+                <option value = "6">6%</option>
+            </select>
         </div>
-
-        <div id="sideBar" class="col-xs-2">
-            <img src="img/menu.png" width="150" height="150" id="menuIcon">
-        </div>
-
-        <div id="converter" class="col-xs-10">
-
-            <div id = "resultScreen" class = "col-xs-12">
-                <div class="col-xs-10">
-                    <h3 id = "result"></h3>
-                </div>
-                <div class="col-xs-2">
-                    <h5 id = "currency">EUR</h5>
-                </div>
-            </div>
-
-            <div id = "numberEntry">
-
-                <div class = "row" id = "firstRow">
-                    <div class="col-xs-4">
-                        <button class="numberButton" id="7">7</button>
-                    </div>
-                    <div class="col-xs-4">
-                        <button class="numberButton" id = "8">8</button>
-                    </div>
-                    <div class="col-xs-4">
-                        <button class="numberButton" id = "9">9</button>
-                    </div>
-                </div>
-
-                <div class = "row" id = "secondRow">
-                    <div class="col-xs-4">
-                        <button class="numberButton" id="4">4</button>
-                    </div>
-                    <div class="col-xs-4">
-                        <button class="numberButton" id="5">5</button>
-                    </div>
-                    <div class="col-xs-4">
-                        <button class="numberButton" id="6">6</button>
-                    </div>
-                </div>
-
-
-                <div id = "thirdRow" class="row">
-                    <div class="col-xs-4">
-                        <button class="numberButton" id="1">1</button>
-                    </div>
-                    <div class="col-xs-4">
-                        <button class="numberButton" id="2">2</button>
-                    </div>
-                    <div class="col-xs-4">
-                        <button class="numberButton" id="3">3</button>
-                    </div>
-                </div>
-
-                <div id = "fourthRow" class="row">
-                    <div class="col-xs-4">
-                        <button class="adminButton"4 id="c">c</button>
-                    </div>
-                    <div class="col-xs-4">
-                        <button class="numberButton" id="0">0</button>
-                    </div>
-                    <div class="col-xs-4">
-                        <button class="adminButton" id="=">=</button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
     </div>
-    <footer>
-        <script src="model.js"></script>
-        <script src = "view.js"></script>
-        <script src = "controller.js"></script>
-        By Chadha Degachi
-    </footer>
+
+    <div id="sideBar" class="col-xs-2">
+        <img src="img/menu.png" width="150" height="150" id="menuIcon">
+    </div>
+
+    <div id="converter" class="col-xs-10">
+
+        <div id = "resultScreen" class = "col-xs-12">
+            <div class="col-xs-10">
+                <h3 id = "result"></h3>
+            </div>
+            <div class="col-xs-2">
+                <h5 id = "currency">EUR</h5>
+            </div>
+        </div>
+
+        <div id = "numberEntry">
+
+            <div class = "row" id = "firstRow">
+                <div class="col-xs-4">
+                    <button class="numberButton" id="7">7</button>
+                </div>
+                <div class="col-xs-4">
+                    <button class="numberButton" id = "8">8</button>
+                </div>
+                <div class="col-xs-4">
+                    <button class="numberButton" id = "9">9</button>
+                </div>
+            </div>
+
+            <div class = "row" id = "secondRow">
+                <div class="col-xs-4">
+                    <button class="numberButton" id="4">4</button>
+                </div>
+                <div class="col-xs-4">
+                    <button class="numberButton" id="5">5</button>
+                </div>
+                <div class="col-xs-4">
+                    <button class="numberButton" id="6">6</button>
+                </div>
+            </div>
+
+
+            <div id = "thirdRow" class="row">
+                <div class="col-xs-4">
+                    <button class="numberButton" id="1">1</button>
+                </div>
+                <div class="col-xs-4">
+                    <button class="numberButton" id="2">2</button>
+                </div>
+                <div class="col-xs-4">
+                    <button class="numberButton" id="3">3</button>
+                </div>
+            </div>
+
+            <div id = "fourthRow" class="row">
+                <div class="col-xs-4">
+                    <button class="adminButton"4 id="c">c</button>
+                </div>
+                <div class="col-xs-4">
+                    <button class="numberButton" id="0">0</button>
+                </div>
+                <div class="col-xs-4">
+                    <button class="adminButton" id="=">=</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<footer>
+    <script src="model.js"></script>
+    <script src = "view.js"></script>
+    <script src = "controller.js"></script>
+    By Chadha Degachi
+</footer>
 </body>
 </html>

@@ -8,12 +8,12 @@ model.js
 controller.js
 img/menu.png
 img/currency1.png
-bootstrap.min.css
+https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css
 
 NETWORK:
 *
 
-#changes to local bootstrap
+#pls
 
 SETTINGS:
 prefer-online

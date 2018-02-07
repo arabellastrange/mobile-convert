@@ -46,6 +46,9 @@ function controller() {
     }
 
     this.initial = function () {
+        if(!navigator.onLine){
+            cview.offlineWarning();
+        };
         ccontroller.updateDisplay();
     };
 }

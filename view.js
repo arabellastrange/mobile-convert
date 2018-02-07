@@ -8,6 +8,7 @@ function view() {
         menu = document.getElementById("menuIcon"),
         close = document.getElementById("closeIcon"),
         nav = document.getElementById("navigation"),
+        footer = document.getElementsByTagName("footer")[0],
         currency = document.getElementById("currency"),
         fCurrencySelector = document.getElementById("fcurrency"), 
         selectedFrom = "EUR",
@@ -68,7 +69,14 @@ function view() {
 
     this.setCurrency = function (curr) {
         currency.innerText = curr;
-    }
+    };
+
+    this.offlineWarning = function () {
+        footer.innerText = "Warning! You are currently offline so this data may be out of date";
+        footer.style.background = "firebrick";
+        footer.style.transition = "0.5";
+        footer.style.color = "white";
+    };
 
     this.setToCurrencyListener = function () {
         tCurrencySelector.addEventListener("change", function () {
