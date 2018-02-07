@@ -6,16 +6,16 @@ function model() {
     hash = new Object();
 
     this.init = function () {
-        window.addEventListener('online', function () {
+        if(navigator.onLine) {
+            console.log("online");
             httpRequest.onreadystatechange = this.parse;
             httpRequest.open('GET', 'https://devweb2017.cis.strath.ac.uk/~aes02112/ecbxml.php', true);
             httpRequest.send();
-        });
-        window.addEventListener('offline', function () {
-            hash  = localStorage.getItem('data');
-        })
-
-    }
+        }
+        else {
+            hash  = JSON.parse(localStorage.getItem('data'));
+        };
+    };
 
     this.parse = function () {
         if (httpRequest.readyState === XMLHttpRequest.DONE) {
@@ -26,10 +26,10 @@ function model() {
                     hash[list[i].getAttribute('currency')] = list[i].getAttribute('rate');
                 }
                 hash['EUR'] = 1; // euro not included in live data so add manually
-                localStorage.setItem('data', hash.toString());
+                localStorage.setItem('data', JSON.stringify(hash));
 
             } else {
-                alert('There was a problem with the request.');
+                alert('Request to Euro Exchange Center has failed');
             };
         };
     }

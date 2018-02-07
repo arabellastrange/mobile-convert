@@ -1,4 +1,5 @@
 CACHE MANIFEST
+
 CACHE:
 index.html
 convert.css
@@ -7,8 +8,12 @@ model.js
 controller.js
 img/menu.png
 img/currency1.png
-https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css
-https://devweb2017.cis.strath.ac.uk/~aes02112/ecbxml.php
+bootstrap.min.css
+
+NETWORK:
+*
+
+#changes to local bootstrap
 
 SETTINGS:
 prefer-online
