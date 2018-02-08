@@ -10,12 +10,35 @@ function view() {
         nav = document.getElementById("navigation"),
         footer = document.getElementsByTagName("footer")[0],
         currency = document.getElementById("currency"),
-        fCurrencySelector = document.getElementById("fcurrency"), 
+        fCurrencySelector = document.getElementById("fcurrency"),
+        rateSelector = document.getElementById("rate"),
+        tCurrencySelector = document.getElementById("tcurrency"),
+
         selectedFrom = "EUR",
         selectedTo = "GBP",
-        rateSelected = "0",
-        rateSelector = document.getElementById("rate"),
-        tCurrencySelector = document.getElementById("tcurrency");
+        rateSelected = "0";
+
+    this.int = function () {
+        if(localStorage.getItem('from') !== null && localStorage.getItem('to') !== null && localStorage.getItem('rate') !== null){
+            selectedFrom = JSON.parse(localStorage.getItem('from'));
+            currency.innerText = selectedFrom;
+            fCurrencySelector.value = selectedFrom;
+            selectedTo = JSON.parse(localStorage.getItem('to'));
+            tCurrencySelector.value = selectedTo;
+            rateSelected = JSON.parse(localStorage.getItem('rate'));
+            //rateSelected.value = rateSelected;
+        }
+
+        this.updateCurrencyInResult();
+        this.offlineWarning();
+        this.setClearButtonFunc();
+        this.setNumberButtonFunc();
+        this.setCloseButtonFunc();
+        this.setMenuButtonFunc();
+        this.setToCurrencyListener();
+        this.setRateListener();
+
+    };
 
 
     this.setNumberButtonFunc = function () {
@@ -29,14 +52,17 @@ function view() {
     };
 
     this.setResult = function (num) {
+        if(num === 0){
+            alert("This amount is too small to exchange with the current rate");
+        }
         result.innerText = num;
-    }
+    };
 
     this.setClearButtonFunc = function () {
-        clear.addEventListener("click",
-            function (e) {
+        clear.addEventListener("click", function () {
                 result.innerText = "";
-            });
+                currency.innerText = selectedFrom; //reset from curr for new calc
+        });
     };
 
     this.setEqualClickCallback = function (callback) {
@@ -64,6 +90,7 @@ function view() {
         fCurrencySelector.addEventListener("change", function () {
             selectedFrom = fCurrencySelector.options[fCurrencySelector.selectedIndex].value;
             currency.innerText = selectedFrom;
+            localStorage.setItem('from', JSON.stringify(selectedFrom));
         });
     };
 
@@ -83,15 +110,15 @@ function view() {
     this.setToCurrencyListener = function () {
         tCurrencySelector.addEventListener("change", function () {
             selectedTo = tCurrencySelector.options[tCurrencySelector.selectedIndex].value;
-            console.log(selectedFrom + " this is the from curr right now");
-            currency.innerText = selectedFrom; //reset from currency cause new calc
+            localStorage.setItem('to', JSON.stringify(selectedTo));
+            currency.innerText = selectedFrom;
         });
     };
 
     this.setRateListener = function () {
         rateSelector.addEventListener("change", function () {
             rateSelected = rateSelector.options[rateSelector.selectedIndex].value;
-            console.log(selectedFrom + " this is the from curr right now");
+            localStorage.setItem('rate', JSON.stringify(rateSelected));
             currency.innerText = selectedFrom;
         });
     };

@@ -9,14 +9,7 @@ function controller() {
 
     this.updateDisplay = function () {
         cmodel.init();
-        cview.offlineWarning();
-        cview.setClearButtonFunc();
-        cview.setNumberButtonFunc();
-        cview.setCloseButtonFunc();
-        cview.setMenuButtonFunc();
-        cview.setToCurrencyListener();
-        cview.setRateListener();
-        cview.updateCurrencyInResult();
+        cview.int();
 
         cview.setEqualClickCallback(function () {
             from = cview.getConvertingFrom();
@@ -35,16 +28,15 @@ function controller() {
     };
 
     function convert(f, t, a, r) {
-       // console.log("i think im converting from " + f);
-       // console.log("i think im converting to "  + t);
-       // console.log("i think im converting " + a + " money");
         var newCurr;
         newCurr = (a*t)/f;
         newCurr = newCurr - ((r*a)/100);
-        if(newCurr < 10){
+
+        if(newCurr < 0){
+            return 0;
+        } else if(newCurr < 10){
             return round(newCurr, 3);
-        }
-        else{
+        } else{
             return Math.round(newCurr);
         }
 
