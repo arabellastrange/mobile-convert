@@ -9,6 +9,7 @@ function controller() {
 
     this.updateDisplay = function () {
         cmodel.init();
+        cview.offlineWarning();
         cview.setClearButtonFunc();
         cview.setNumberButtonFunc();
         cview.setCloseButtonFunc();
@@ -27,17 +28,26 @@ function controller() {
             var newAmount;
 
             if(!(amount === "")){
-                cview.setResult(convert(fromRate, toRate, amount));
+                cview.setResult(convert(fromRate, toRate, amount, rate));
                 cview.setCurrency(to);
             }
         });
     };
 
-    function convert(f, t, a) {
-        console.log("i think im converting from " + f);
-        console.log("i think im converting to "  + t);
-        console.log("i think im converting " + a + " money");
-        return round(((a*t)/f), 2);
+    function convert(f, t, a, r) {
+       // console.log("i think im converting from " + f);
+       // console.log("i think im converting to "  + t);
+       // console.log("i think im converting " + a + " money");
+        var newCurr;
+        newCurr = (a*t)/f;
+        newCurr = newCurr - ((r*a)/100);
+        if(newCurr < 10){
+            return round(newCurr, 3);
+        }
+        else{
+            return Math.round(newCurr);
+        }
+
     };
 
     function round(number, precision) {
@@ -46,10 +56,7 @@ function controller() {
     }
 
     this.initial = function () {
-        if(!navigator.onLine){
-            cview.offlineWarning();
-        };
-        ccontroller.updateDisplay();
+       ccontroller.updateDisplay();
     };
 }
 

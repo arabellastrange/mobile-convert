@@ -72,21 +72,25 @@ function view() {
     };
 
     this.offlineWarning = function () {
-        footer.innerText = "Warning! You are currently offline so this data may be out of date";
-        footer.style.background = "firebrick";
-        footer.style.transition = "0.5";
-        footer.style.color = "white";
+        if(navigator.onLine === false){
+            footer.innerText = "Warning! You are currently offline so this data may be out of date";
+            footer.style.background = "firebrick";
+            footer.style.transition = "0.5";
+            footer.style.color = "white";
+        }
     };
 
     this.setToCurrencyListener = function () {
         tCurrencySelector.addEventListener("change", function () {
             selectedTo = tCurrencySelector.options[tCurrencySelector.selectedIndex].value;
+            currency.innerText = selectedFrom; //reset from currency cause new calc
         });
     };
 
     this.setRateListener = function () {
         rateSelector.addEventListener("change", function () {
             rateSelected = rateSelector.options[rateSelector.selectedIndex].value;
+            currency.innerText = selectedFrom;
         });
     };
 
