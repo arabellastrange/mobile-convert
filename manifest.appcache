@@ -8,12 +8,11 @@ model.js
 controller.js
 img/menu.png
 img/currency1.png
-https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css
+bootstrap.css
 
 NETWORK:
 *
 
-#updated calc to include bank rate
-
+#fix bootstrap???
 SETTINGS:
 prefer-online

@@ -83,6 +83,7 @@ function view() {
     this.setToCurrencyListener = function () {
         tCurrencySelector.addEventListener("change", function () {
             selectedTo = tCurrencySelector.options[tCurrencySelector.selectedIndex].value;
+            console.log(selectedFrom + " this is the from curr right now");
             currency.innerText = selectedFrom; //reset from currency cause new calc
         });
     };
@@ -90,6 +91,7 @@ function view() {
     this.setRateListener = function () {
         rateSelector.addEventListener("change", function () {
             rateSelected = rateSelector.options[rateSelector.selectedIndex].value;
+            console.log(selectedFrom + " this is the from curr right now");
             currency.innerText = selectedFrom;
         });
     };
